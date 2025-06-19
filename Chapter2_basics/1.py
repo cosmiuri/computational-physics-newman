@@ -1,4 +1,6 @@
-x = 1.5
-z = 2+3j
+h = float(input("Enter height in meters: "))
+t = float(input("Enter time in seconds: "))
+g = 9.81
+s = g*t**2/2
 
-print(x,z)
+print('the height of the ball is ', h-s,'meters')
