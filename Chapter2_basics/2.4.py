@@ -13,7 +13,7 @@ v = float(input('enter speed: '))
 
 t_earth = s/v
 
-t_proper = t_earth*sqrt(1/1-(v/c)**2)
+t_proper = t_earth*sqrt(1/(1-(v/c)**2))
 
 print(t_earth)
 print(t_proper)
