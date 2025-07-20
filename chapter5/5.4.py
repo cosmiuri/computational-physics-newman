@@ -2,17 +2,17 @@ import math
 import numpy as np
 import matplotlib.pyplot as plt
 
-def integrand(m,theta,x):
+def Bessel(m,theta,x):
     return np.cos(m*theta - x*np.sin(theta))
 
-def J(m,x,N=1000):
+def J(m,x, N=1000):
 
     a = 0
     b = np.pi
     h = (b-a)/N
-    theta = np.linspace(a,b,N+1)
+    theta = np.linspace(a, b, N+1)
 
-    y = integrand(m,theta,x)
+    y = Bessel(m,theta,x)
 
     S = y[0] + y[1] + 4*np.sum(y[1:N:1])+2*np.sum(y[2:N-1:2])
     return S*(1/3) * h / np.pi
